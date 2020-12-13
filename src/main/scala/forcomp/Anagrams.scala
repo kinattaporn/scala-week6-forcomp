@@ -33,20 +33,24 @@ object Anagrams extends AnagramsInterface {
    *
    * Note: you must use `groupBy` to implement this method!
    */
-  def wordOccurrences(w: Word): Occurrences =
-    w.toList.map(x => x.toLower)
-      .groupBy(x => x)
-      .mapValues(x => x.size)
-      .toList
-      .sorted
-
+  def wordOccurrences(w: Word): Occurrences = {
+    val ww = w.toList.map(x => x.toLower)
+//    println(ww)                             // List(r, o, b, e, r, t)
+    val gb = ww.groupBy(x => x)
+//    println(gb)                             // HashMap(e -> List(e), t -> List(t), b -> List(b), r -> List(r, r), o -> List(o))
+    val m = gb.map(x => (x._1, x._2.size))
+//    println(m)                              // HashMap(e -> 1, t -> 1, b -> 1, r -> 2, o -> 1)
+    val l = m.toList
+//    println(l)                              // List((e,1), (t,1), (b,1), (r,2), (o,1))
+//    println(l.sorted)                       // List((b,1), (e,1), (o,1), (r,2), (t,1))
+    l.sorted
+  }
   /** Converts a sentence into its character occurrence list. */
-  def sentenceOccurrences(s: Sentence): Occurrences =
-    s.mkString("").toList.map(x => x.toLower)
-      .groupBy(x => x)
-      .mapValues(x => x.size)
-      .toList
-      .sorted
+  def sentenceOccurrences(s: Sentence): Occurrences = {
+    val w = s.mkString("")
+//    println(w)                              // abcde
+    wordOccurrences(w)
+  }
 
   /** The `dictionaryByOccurrences` is a `Map` from different occurrences to a sequence of all
    * the words that have that occurrence count.
@@ -122,7 +126,21 @@ object Anagrams extends AnagramsInterface {
    *  Note: the resulting value is an occurrence - meaning it is sorted
    *  and has no zero-entries.
    */
-  def subtract(x: Occurrences, y: Occurrences): Occurrences = ???
+  def subtract(x: Occurrences, y: Occurrences): Occurrences = {
+    val xy = x ::: y.map(x => (x._1, x._2 * -1))
+//    println(xy)                                           // List((a,2), (b,3), (c,4), (a,-2), (c,-1))
+    val gb = xy.groupBy(x => x._1)
+//    println(gb)                                           // HashMap(a -> List((a,2), (a,-2)), b -> List((b,3)), c -> List((c,4), (c,-1)))
+    val m = gb.map(x => (x._1, x._2.map(y => y._2).sum))
+//    println(m)                                            // HashMap(a -> 0, b -> 3, c -> 3)
+    val l = m.toList
+//    println(l)                                            // List((a,0), (b,3), (c,3))
+    val f = l.filter(x => x._2 != 0)
+//    println(f)                                            // List((b,3), (c,3))
+//    println(f.sorted)                                     // List((b,3), (c,3))
+    f.sorted
+  }
+
 
   /** Returns a list of all anagram sentences of the given sentence.
    *

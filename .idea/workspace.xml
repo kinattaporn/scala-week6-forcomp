@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad859d5d-b186-4bd2-a244-77da8229c90c" name="Default Changelist" comment="" />
+    <list default="true" id="ad859d5d-b186-4bd2-a244-77da8229c90c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/forcomp/Anagrams.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/forcomp/Anagrams.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/forcomp/AnagramsSuite.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/forcomp/AnagramsSuite.scala" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,10 +20,14 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1lFzwj1GsfHWm6k5lqJNTHYszA5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -26,10 +35,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="JUnit.AnagramsSuite.combinations$colon$u0020abba$u0020$u00288pts$u0029">
-    <configuration name="AnagramsSuite.combinations$colon$u0020$u005B$u005D$u0020$u00288pts$u0029" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AnagramsSuite.subtract$colon$u0020lard$u0020$minus$u0020r$u0020$u002810pts$u0029">
+    <configuration name="AnagramsSuite.dictionaryByOccurrences$u002Eget$colon$u0020eat$u0020$u002810pts$u0029" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="progfun1-forcomp" />
       <extension name="coverage">
         <pattern>
@@ -39,13 +49,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="forcomp" />
       <option name="MAIN_CLASS_NAME" value="forcomp.AnagramsSuite" />
-      <option name="METHOD_NAME" value="combinations$colon$u0020$u005B$u005D$u0020$u00288pts$u0029" />
+      <option name="METHOD_NAME" value="dictionaryByOccurrences$u002Eget$colon$u0020eat$u0020$u002810pts$u0029" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AnagramsSuite.combinations$colon$u0020abba$u0020$u00288pts$u0029" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AnagramsSuite.subtract$colon$u0020lard$u0020$minus$u0020r$u0020$u002810pts$u0029" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="progfun1-forcomp" />
       <extension name="coverage">
         <pattern>
@@ -55,13 +65,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="forcomp" />
       <option name="MAIN_CLASS_NAME" value="forcomp.AnagramsSuite" />
-      <option name="METHOD_NAME" value="combinations$colon$u0020abba$u0020$u00288pts$u0029" />
+      <option name="METHOD_NAME" value="subtract$colon$u0020lard$u0020$minus$u0020r$u0020$u002810pts$u0029" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AnagramsSuite.combinations$u0020print" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AnagramsSuite.subtract$u0020test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="progfun1-forcomp" />
       <extension name="coverage">
         <pattern>
@@ -71,13 +81,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="forcomp" />
       <option name="MAIN_CLASS_NAME" value="forcomp.AnagramsSuite" />
-      <option name="METHOD_NAME" value="combinations$u0020print" />
+      <option name="METHOD_NAME" value="subtract$u0020test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AnagramsSuite.combinations$u0020test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AnagramsSuite.wordAnagrams$u0020married$u0020$u00282pts$u0029" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="progfun1-forcomp" />
       <extension name="coverage">
         <pattern>
@@ -87,7 +97,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="forcomp" />
       <option name="MAIN_CLASS_NAME" value="forcomp.AnagramsSuite" />
-      <option name="METHOD_NAME" value="combinations$u0020test" />
+      <option name="METHOD_NAME" value="wordAnagrams$u0020married$u0020$u00282pts$u0029" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -111,11 +121,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AnagramsSuite.combinations$colon$u0020abba$u0020$u00288pts$u0029" />
-        <item itemvalue="JUnit.AnagramsSuite.combinations$u0020test" />
-        <item itemvalue="JUnit.AnagramsSuite.combinations$colon$u0020$u005B$u005D$u0020$u00288pts$u0029" />
-        <item itemvalue="JUnit.AnagramsSuite.combinations$u0020print" />
+        <item itemvalue="JUnit.AnagramsSuite.subtract$colon$u0020lard$u0020$minus$u0020r$u0020$u002810pts$u0029" />
+        <item itemvalue="JUnit.AnagramsSuite.subtract$u0020test" />
         <item itemvalue="JUnit.AnagramsSuite.wordAnagrams$u0020player$u0020$u00282pts$u0029" />
+        <item itemvalue="JUnit.AnagramsSuite.wordAnagrams$u0020married$u0020$u00282pts$u0029" />
+        <item itemvalue="JUnit.AnagramsSuite.dictionaryByOccurrences$u002Eget$colon$u0020eat$u0020$u002810pts$u0029" />
       </list>
     </recent_temporary>
   </component>
@@ -177,22 +187,26 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1269" height="229" key="GridCell.Tab.0.bottom" timestamp="1607315494007">
+    <state x="377" y="60" key="CommitChangelistDialog2" timestamp="1607821815802">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1269" height="229" key="GridCell.Tab.0.bottom/0.23.1440.873@0.23.1440.873" timestamp="1607315494007" />
-    <state width="1269" height="229" key="GridCell.Tab.0.center" timestamp="1607315494006">
+    <state x="377" y="60" key="CommitChangelistDialog2/0.23.1440.873@0.23.1440.873" timestamp="1607821815802" />
+    <state width="1269" height="229" key="GridCell.Tab.0.bottom" timestamp="1607821651149">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1269" height="229" key="GridCell.Tab.0.center/0.23.1440.873@0.23.1440.873" timestamp="1607315494006" />
-    <state width="1269" height="229" key="GridCell.Tab.0.left" timestamp="1607315494006">
+    <state width="1269" height="229" key="GridCell.Tab.0.bottom/0.23.1440.873@0.23.1440.873" timestamp="1607821651149" />
+    <state width="1269" height="229" key="GridCell.Tab.0.center" timestamp="1607821651148">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1269" height="229" key="GridCell.Tab.0.left/0.23.1440.873@0.23.1440.873" timestamp="1607315494006" />
-    <state width="1269" height="229" key="GridCell.Tab.0.right" timestamp="1607315494007">
+    <state width="1269" height="229" key="GridCell.Tab.0.center/0.23.1440.873@0.23.1440.873" timestamp="1607821651148" />
+    <state width="1269" height="229" key="GridCell.Tab.0.left" timestamp="1607821651148">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1269" height="229" key="GridCell.Tab.0.right/0.23.1440.873@0.23.1440.873" timestamp="1607315494007" />
+    <state width="1269" height="229" key="GridCell.Tab.0.left/0.23.1440.873@0.23.1440.873" timestamp="1607821651148" />
+    <state width="1269" height="229" key="GridCell.Tab.0.right" timestamp="1607821651149">
+      <screen x="0" y="23" width="1440" height="873" />
+    </state>
+    <state width="1269" height="229" key="GridCell.Tab.0.right/0.23.1440.873@0.23.1440.873" timestamp="1607821651149" />
     <state width="1269" height="284" key="GridCell.Tab.1.bottom" timestamp="1607315436563">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
