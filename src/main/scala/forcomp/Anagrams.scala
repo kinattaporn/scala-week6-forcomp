@@ -45,6 +45,7 @@ object Anagrams extends AnagramsInterface {
 //    println(l.sorted)                       // List((b,1), (e,1), (o,1), (r,2), (t,1))
     l.sorted
   }
+
   /** Converts a sentence into its character occurrence list. */
   def sentenceOccurrences(s: Sentence): Occurrences = {
     val w = s.mkString("")
@@ -141,7 +142,6 @@ object Anagrams extends AnagramsInterface {
     f.sorted
   }
 
-
   /** Returns a list of all anagram sentences of the given sentence.
    *
    *  An anagram of a sentence is formed by taking the occurrences of all the characters of
@@ -183,6 +183,18 @@ object Anagrams extends AnagramsInterface {
    *  Note: There is only one anagram of an empty sentence.
    */
   def sentenceAnagrams(sentence: Sentence): List[Sentence] = ???
+  def remainAnagrams(sentence: Sentence): List[(Occurrences, Option[List[String]], Occurrences)] = {
+    println(sentenceOccurrences(sentence))
+    combinations(sentenceOccurrences(sentence)).map(x => {
+      val dbo = dictionaryByOccurrences.get(x)
+      val remain = {
+        if (dbo == None) List()
+        else subtract(sentenceOccurrences(sentence), wordOccurrences(dbo.get(0)))
+      }
+      println(x, "|", dbo, "|", remain)
+      (x, dbo, remain)
+    })
+  }
 }
 
 object Dictionary {
