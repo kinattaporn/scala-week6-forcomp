@@ -80,7 +80,12 @@ class AnagramsSuite {
 
   @Test def `sentence anagrams: Linux rulez (10pts)`: Unit = {
     val sentence = List("Linux", "rulez")
-    remainAnagrams(sentence)
+    val o = sentenceOccurrences(sentence)
+//    remainAnagrams(o, List()).foreach(x => println(x._1, "|", x._2, "|", x._3))
+    remainAnagrams(o, List()).foreach(x => remainAnagrams(x._3, x._2).foreach(x => println(x._1, "|", x._2, "|", x._3)))
+//    val a = List() ::: List(Some(List("Zulu")))
+//    println(a)
+
     val anas = List(
       List("Rex", "Lin", "Zulu"),
       List("nil", "Zulu", "Rex"),

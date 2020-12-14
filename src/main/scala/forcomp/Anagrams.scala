@@ -182,18 +182,27 @@ object Anagrams extends AnagramsInterface {
    *
    *  Note: There is only one anagram of an empty sentence.
    */
-  def sentenceAnagrams(sentence: Sentence): List[Sentence] = ???
-  def remainAnagrams(sentence: Sentence): List[(Occurrences, Option[List[String]], Occurrences)] = {
-    println(sentenceOccurrences(sentence))
-    combinations(sentenceOccurrences(sentence)).map(x => {
-      val dbo = dictionaryByOccurrences.get(x)
-      val remain = {
-        if (dbo == None) List()
-        else subtract(sentenceOccurrences(sentence), wordOccurrences(dbo.get(0)))
-      }
-      println(x, "|", dbo, "|", remain)
-      (x, dbo, remain)
-    })
+  def sentenceAnagrams(sentence: Sentence): List[Sentence] = {
+    if (sentence.length == 0) List()
+    else List ()
+  }
+  def remainAnagramsRecursive(o: Occurrences, wordList: List[Option[List[String]]]): List[(Occurrences, List[Option[List[String]]], Occurrences)] = {
+    if (remainAnagrams(o, wordList).length == 0) remainAnagrams(o, wordList)
+    else remainAnagrams(remainAnagramsRecursive(o, wordList)(0)._3, remainAnagramsRecursive(o, wordList)(0)._2)
+//    else remainAnagrams(o, List()).foreach(x => remainAnagramsRecursive(x._3, x._2))
+  }
+  def remainAnagrams(o: Occurrences, wordList: List[Option[List[String]]]): List[(Occurrences, List[Option[List[String]]], Occurrences)] = {
+    println("------------", o)
+    combinations(o)
+      .map(x => {
+        val possibleWord = dictionaryByOccurrences.get(x)
+        val remain = {
+          if (possibleWord == None) List()
+          else subtract(o, wordOccurrences(possibleWord.get(0)))
+        }
+        (x, wordList ::: List(possibleWord), remain)
+      })
+      .filter(x => !x._2.contains(None))
   }
 }
 
