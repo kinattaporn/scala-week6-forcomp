@@ -33,11 +33,20 @@ class AnagramsSuite {
 
 
   @Test def `combinations test`: Unit = {
-    val o1 = List(('a', 2))
-    val o2 = List(('a', 2), ('b', 3))
+    val c1 = combinations2(('b', 3), combinations1(('c', 4)))
+    val c2 = combinations2(('a', 2), combinations2(('b', 3), combinations1(('c', 4))))
+    val o1 = List(('c', 4))
+    val o2 = List(('b', 3), ('c', 4))
     val o3 = List(('a', 2), ('b', 3), ('c', 4))
+    println("---------- c1")
+    c1.foreach(println)
+    println("---------- c2")
+    c2.foreach(println)
+    println("---------- o1")
     combinations(o1).foreach(println)
+    println("---------- o2")
     combinations(o2).foreach(println)
+    println("---------- o3")
     combinations(o3).foreach(println)
   }
 
@@ -80,11 +89,34 @@ class AnagramsSuite {
 
   @Test def `sentence anagrams: Linux rulez (10pts)`: Unit = {
     val sentence = List("Linux", "rulez")
-    val o = sentenceOccurrences(sentence)
-//    remainAnagrams(o, List()).foreach(x => println(x._1, "|", x._2, "|", x._3))
-    remainAnagrams(o, List()).foreach(x => remainAnagrams(x._3, x._2).foreach(x => println(x._1, "|", x._2, "|", x._3)))
-//    val a = List() ::: List(Some(List("Zulu")))
-//    println(a)
+    val possibleWord = findPossibleWord(sentence)
+    println("----- possibleWord")
+    possibleWord.foreach(println)
+
+    val list1 = List("Lin", "nil")
+    val list2 = List("run", "urn")
+    val list3 = List("lien", "line", "Neil", "Nile")
+    val list4 = List("lure", "rule")
+    val list1234 = List(list1, list2, list3, list4)
+    val cw34 = combinationsWord2(list3, list4)
+    val cw234 = combinationsWord3(list2, combinationsWord2(list3, list4))
+    val cw1234 = combinationsWord3(list1, combinationsWord3(list2, combinationsWord2(list3, list4)))
+    val cwr = combinationsWord(list1234)
+    val cwr2 = combinationsWord(possibleWord)
+//    println("----- cw34", cw34)
+//    cw34.foreach(println)
+//    println("----- cw234", cw234)
+//    cw234.foreach(println)
+//    println("----- cw1234", cw1234)
+//    cw1234.foreach(println)
+//    println("----- cwr", cwr)
+//    cwr.foreach(println)
+//    println("----- cwr2", cwr2)
+//    cwr2.foreach(println)
+
+    val sa = sentenceAnagrams(sentence)
+    println("----- sa", sa)
+    sa.foreach(println)
 
     val anas = List(
       List("Rex", "Lin", "Zulu"),
@@ -112,5 +144,5 @@ class AnagramsSuite {
   }
 
 
-  @Rule def individualTestTimeout = new org.junit.rules.Timeout(10 * 1000)
+  @Rule def individualTestTimeout = new org.junit.rules.Timeout(1000 * 1000)
 }

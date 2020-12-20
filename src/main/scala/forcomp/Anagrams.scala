@@ -183,26 +183,41 @@ object Anagrams extends AnagramsInterface {
    *  Note: There is only one anagram of an empty sentence.
    */
   def sentenceAnagrams(sentence: Sentence): List[Sentence] = {
+    val possibleWord = findPossibleWord(sentence)
     if (sentence.length == 0) List()
-    else List ()
+    else combinationsWord(possibleWord)
   }
-  def remainAnagramsRecursive(o: Occurrences, wordList: List[Option[List[String]]]): List[(Occurrences, List[Option[List[String]]], Occurrences)] = {
-    if (remainAnagrams(o, wordList).length == 0) remainAnagrams(o, wordList)
-    else remainAnagrams(remainAnagramsRecursive(o, wordList)(0)._3, remainAnagramsRecursive(o, wordList)(0)._2)
-//    else remainAnagrams(o, List()).foreach(x => remainAnagramsRecursive(x._3, x._2))
-  }
-  def remainAnagrams(o: Occurrences, wordList: List[Option[List[String]]]): List[(Occurrences, List[Option[List[String]]], Occurrences)] = {
-    println("------------", o)
+  def findPossibleWord(sentence: Sentence): List[List[Word]] = {
+    val o = sentenceOccurrences(sentence)
+//    println("occurrences", o)
     combinations(o)
       .map(x => {
         val possibleWord = dictionaryByOccurrences.get(x)
-        val remain = {
-          if (possibleWord == None) List()
-          else subtract(o, wordOccurrences(possibleWord.get(0)))
-        }
-        (x, wordList ::: List(possibleWord), remain)
+//        println(x, "|", possibleWord)
+        possibleWord
       })
-      .filter(x => !x._2.contains(None))
+      .filter(x => x != None)
+      .map(x => x.get ::: List(""))
+  }
+  def combinationsWord(possibleWord: List[List[Word]]): List[List[Word]] = {
+    if (possibleWord.length == 0) List(List())
+    else if (possibleWord.length == 1) possibleWord
+    else if (possibleWord.length == 2) combinationsWord2(possibleWord.head, possibleWord.tail.head)
+    else combinationsWord3(possibleWord.head, combinationsWord(possibleWord.tail))
+  }
+  def combinationsWord2(x: List[Word], y: List[Word]): List[List[Word]] = {
+    val forCombinations = for {
+      i <- x
+      j <- y
+    } yield List(i, j)
+    forCombinations
+  }
+  def combinationsWord3(x: List[Word], y: List[List[Word]]): List[List[Word]] = {
+    val forCombinations = for {
+      i <- x
+      j <- y
+    } yield List(i) ::: j
+    forCombinations
   }
 }
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad859d5d-b186-4bd2-a244-77da8229c90c" name="Default Changelist" comment="">
+    <list default="true" id="ad859d5d-b186-4bd2-a244-77da8229c90c" name="Default Changelist" comment="Add remainAnagramsRecursive">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/forcomp/Anagrams.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/forcomp/Anagrams.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/scala/forcomp/AnagramsSuite.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/forcomp/AnagramsSuite.scala" afterDir="false" />
@@ -42,6 +42,22 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="JUnit.AnagramsSuite.sentence$u0020anagrams$colon$u0020Linux$u0020rulez$u0020$u002810pts$u0029">
+    <configuration name="AnagramsSuite.combinations$u0020test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="progfun1-forcomp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="forcomp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="forcomp" />
+      <option name="MAIN_CLASS_NAME" value="forcomp.AnagramsSuite" />
+      <option name="METHOD_NAME" value="combinations$u0020test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AnagramsSuite.dictionaryByOccurrences$u002Eget$colon$u0020eat$u0020$u002810pts$u0029" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="progfun1-forcomp" />
       <extension name="coverage">
@@ -69,22 +85,6 @@
       <option name="PACKAGE_NAME" value="forcomp" />
       <option name="MAIN_CLASS_NAME" value="forcomp.AnagramsSuite" />
       <option name="METHOD_NAME" value="sentence$u0020anagrams$colon$u0020Linux$u0020rulez$u0020$u002810pts$u0029" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AnagramsSuite.subtract$colon$u0020lard$u0020$minus$u0020r$u0020$u002810pts$u0029" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="progfun1-forcomp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="forcomp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="forcomp" />
-      <option name="MAIN_CLASS_NAME" value="forcomp.AnagramsSuite" />
-      <option name="METHOD_NAME" value="subtract$colon$u0020lard$u0020$minus$u0020r$u0020$u002810pts$u0029" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -125,10 +125,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.AnagramsSuite.sentence$u0020anagrams$colon$u0020Linux$u0020rulez$u0020$u002810pts$u0029" />
+        <item itemvalue="JUnit.AnagramsSuite.combinations$u0020test" />
         <item itemvalue="JUnit.AnagramsSuite.wordAnagrams$u0020player$u0020$u00282pts$u0029" />
         <item itemvalue="JUnit.AnagramsSuite.wordAnagrams$u0020married$u0020$u00282pts$u0029" />
         <item itemvalue="JUnit.AnagramsSuite.dictionaryByOccurrences$u002Eget$colon$u0020eat$u0020$u002810pts$u0029" />
-        <item itemvalue="JUnit.AnagramsSuite.subtract$colon$u0020lard$u0020$minus$u0020r$u0020$u002810pts$u0029" />
       </list>
     </recent_temporary>
   </component>
@@ -201,59 +201,67 @@
       <option name="project" value="LOCAL" />
       <updated>1607904902705</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add remainAnagramsRecursive">
+      <created>1607926456346</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1607926456346</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add subtract" />
     <MESSAGE value="Add remainAnagrams" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add remainAnagrams" />
+    <MESSAGE value="Add remainAnagramsRecursive" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add remainAnagramsRecursive" />
   </component>
   <component name="WindowStateProjectService">
     <state x="522" y="232" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1607900355435">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
     <state x="522" y="232" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1440.873@0.23.1440.873" timestamp="1607900355435" />
-    <state x="377" y="60" key="CommitChangelistDialog2" timestamp="1607904902255">
+    <state x="377" y="60" key="CommitChangelistDialog2" timestamp="1608426026705">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state x="377" y="60" key="CommitChangelistDialog2/0.23.1440.873@0.23.1440.873" timestamp="1607904902255" />
-    <state width="1269" height="229" key="GridCell.Tab.0.bottom" timestamp="1607926422910">
+    <state x="377" y="60" key="CommitChangelistDialog2/0.23.1440.873@0.23.1440.873" timestamp="1608426026705" />
+    <state width="1269" height="229" key="GridCell.Tab.0.bottom" timestamp="1608424751923">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1269" height="229" key="GridCell.Tab.0.bottom/0.23.1440.873@0.23.1440.873" timestamp="1607926422910" />
-    <state width="1269" height="229" key="GridCell.Tab.0.center" timestamp="1607926422909">
+    <state width="1269" height="229" key="GridCell.Tab.0.bottom/0.23.1440.873@0.23.1440.873" timestamp="1608424751923" />
+    <state width="1269" height="229" key="GridCell.Tab.0.center" timestamp="1608424751921">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1269" height="229" key="GridCell.Tab.0.center/0.23.1440.873@0.23.1440.873" timestamp="1607926422909" />
-    <state width="1269" height="229" key="GridCell.Tab.0.left" timestamp="1607926422909">
+    <state width="1269" height="229" key="GridCell.Tab.0.center/0.23.1440.873@0.23.1440.873" timestamp="1608424751921" />
+    <state width="1269" height="229" key="GridCell.Tab.0.left" timestamp="1608424751920">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1269" height="229" key="GridCell.Tab.0.left/0.23.1440.873@0.23.1440.873" timestamp="1607926422909" />
-    <state width="1269" height="229" key="GridCell.Tab.0.right" timestamp="1607926422910">
+    <state width="1269" height="229" key="GridCell.Tab.0.left/0.23.1440.873@0.23.1440.873" timestamp="1608424751920" />
+    <state width="1269" height="229" key="GridCell.Tab.0.right" timestamp="1608424751922">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1269" height="229" key="GridCell.Tab.0.right/0.23.1440.873@0.23.1440.873" timestamp="1607926422910" />
-    <state width="1269" height="284" key="GridCell.Tab.1.bottom" timestamp="1607315436563">
+    <state width="1269" height="229" key="GridCell.Tab.0.right/0.23.1440.873@0.23.1440.873" timestamp="1608424751922" />
+    <state width="1269" height="284" key="GridCell.Tab.1.bottom" timestamp="1608421118124">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1269" height="284" key="GridCell.Tab.1.bottom/0.23.1440.873@0.23.1440.873" timestamp="1607315436563" />
-    <state width="1269" height="284" key="GridCell.Tab.1.center" timestamp="1607315436561">
+    <state width="1269" height="284" key="GridCell.Tab.1.bottom/0.23.1440.873@0.23.1440.873" timestamp="1608421118124" />
+    <state width="1269" height="284" key="GridCell.Tab.1.center" timestamp="1608421118123">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1269" height="284" key="GridCell.Tab.1.center/0.23.1440.873@0.23.1440.873" timestamp="1607315436561" />
-    <state width="1269" height="284" key="GridCell.Tab.1.left" timestamp="1607315436560">
+    <state width="1269" height="284" key="GridCell.Tab.1.center/0.23.1440.873@0.23.1440.873" timestamp="1608421118123" />
+    <state width="1269" height="284" key="GridCell.Tab.1.left" timestamp="1608421118122">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1269" height="284" key="GridCell.Tab.1.left/0.23.1440.873@0.23.1440.873" timestamp="1607315436560" />
-    <state width="1269" height="284" key="GridCell.Tab.1.right" timestamp="1607315436562">
+    <state width="1269" height="284" key="GridCell.Tab.1.left/0.23.1440.873@0.23.1440.873" timestamp="1608421118122" />
+    <state width="1269" height="284" key="GridCell.Tab.1.right" timestamp="1608421118123">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1269" height="284" key="GridCell.Tab.1.right/0.23.1440.873@0.23.1440.873" timestamp="1607315436562" />
-    <state x="384" y="199" key="Vcs.Push.Dialog.v2" timestamp="1607904904389">
+    <state width="1269" height="284" key="GridCell.Tab.1.right/0.23.1440.873@0.23.1440.873" timestamp="1608421118123" />
+    <state x="384" y="199" key="Vcs.Push.Dialog.v2" timestamp="1607926458128">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state x="384" y="199" key="Vcs.Push.Dialog.v2/0.23.1440.873@0.23.1440.873" timestamp="1607904904389" />
+    <state x="384" y="199" key="Vcs.Push.Dialog.v2/0.23.1440.873@0.23.1440.873" timestamp="1607926458128" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1607916073283">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
