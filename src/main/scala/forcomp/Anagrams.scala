@@ -183,12 +183,35 @@ object Anagrams extends AnagramsInterface {
    *  Note: There is only one anagram of an empty sentence.
    */
   def sentenceAnagrams(sentence: Sentence): List[Sentence] = {
-    val possibleWord = findPossibleWord(sentence)
-    if (sentence.length == 0) List()
-    else combinationsWord(possibleWord)
-  }
-  def findPossibleWord(sentence: Sentence): List[List[Word]] = {
     val o = sentenceOccurrences(sentence)
+    val possibleWord = findPossibleWord(o)
+    val possibleWordTest = List(
+      List("Zulu", ""),
+        List("Lin", "nil", ""),
+        List("Rex", "")
+    )
+    if (sentence.length == 0) List()
+    else combinationsWord(possibleWordTest)
+  }
+//  def occurrencesWordRecursive(o: Occurrences, ): (Occurrences, List[List[Word]]) = {
+//
+//  }
+  def occurrencesWord(wordList: List[List[Word]], o: Occurrences): List[(List[List[Word]], Occurrences)] = {
+//    println("occurrences", o)
+    combinations(o)
+      .map(x => {
+        val possibleWord = dictionaryByOccurrences.get(x)
+        val remain = {
+          if (possibleWord == None) List()
+          else subtract(o, x)
+        }
+        println(x, "|", possibleWord, "|", remain)
+        (possibleWord, remain)
+      })
+      .filter(x => x._1 != None)
+      .map(x => (wordList ::: List(x._1.get), x._2))
+  }
+  def findPossibleWord(o: Occurrences): List[List[Word]] = {
 //    println("occurrences", o)
     combinations(o)
       .map(x => {

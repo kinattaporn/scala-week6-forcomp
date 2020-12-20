@@ -89,9 +89,26 @@ class AnagramsSuite {
 
   @Test def `sentence anagrams: Linux rulez (10pts)`: Unit = {
     val sentence = List("Linux", "rulez")
-    val possibleWord = findPossibleWord(sentence)
-    println("----- possibleWord")
-    possibleWord.foreach(println)
+    val o = sentenceOccurrences(sentence) // List((e,1), (i,1), (l,2), (n,1), (r,1), (u,2), (x,1), (z,1))
+    val oZulu = List(('e',1), ('i',1), ('l',1), ('n',1), ('r',1), ('x',1))
+    val oLin = List(('e',1), ('r',1), ('x',1))
+    val occWordZulu = occurrencesWord(List(), oZulu)
+    val occWordLin = occurrencesWord(List(List("Zulu")), oLin)
+    println("----- occWordZulu")
+    occWordZulu.foreach(println)
+    println("----- occWordLin")
+    occWordLin.foreach(println)
+
+    val possibleWord = findPossibleWord(o)
+    val possibleWordTest = List(
+      List("Zulu", ""),
+      List("Lin", "nil", ""),
+      List("Rex", "")
+    )
+//    println("----- possibleWord")
+//    possibleWord.foreach(println)
+//    println("----- possibleWordTest")
+//    possibleWordTest.foreach(println)
 
     val list1 = List("Lin", "nil")
     val list2 = List("run", "urn")
@@ -102,7 +119,8 @@ class AnagramsSuite {
     val cw234 = combinationsWord3(list2, combinationsWord2(list3, list4))
     val cw1234 = combinationsWord3(list1, combinationsWord3(list2, combinationsWord2(list3, list4)))
     val cwr = combinationsWord(list1234)
-    val cwr2 = combinationsWord(possibleWord)
+//    val cwrPwt = combinationsWord(possibleWordTest)
+//    val cwrPw = combinationsWord(possibleWord)
 //    println("----- cw34", cw34)
 //    cw34.foreach(println)
 //    println("----- cw234", cw234)
@@ -111,32 +129,34 @@ class AnagramsSuite {
 //    cw1234.foreach(println)
 //    println("----- cwr", cwr)
 //    cwr.foreach(println)
-//    println("----- cwr2", cwr2)
-//    cwr2.foreach(println)
-
-    val sa = sentenceAnagrams(sentence)
-    println("----- sa", sa)
-    sa.foreach(println)
+//    println("----- cwrPwt", cwrPwt)
+//    cwrPwt.foreach(println)
+//    println("----- cwrPw", cwrPw)
+//    cwrPw.foreach(println)
+//
+//    val sa = sentenceAnagrams(sentence)
+//    println("----- sa", sa)
+//    sa.foreach(println)
 
     val anas = List(
-      List("Rex", "Lin", "Zulu"),
-      List("nil", "Zulu", "Rex"),
-      List("Rex", "nil", "Zulu"),
-      List("Zulu", "Rex", "Lin"),
-      List("null", "Uzi", "Rex"),
-      List("Rex", "Zulu", "Lin"),
-      List("Uzi", "null", "Rex"),
-      List("Rex", "null", "Uzi"),
-      List("null", "Rex", "Uzi"),
-      List("Lin", "Rex", "Zulu"),
-      List("nil", "Rex", "Zulu"),
-      List("Rex", "Uzi", "null"),
-      List("Rex", "Zulu", "nil"),
-      List("Zulu", "Rex", "nil"),
-      List("Zulu", "Lin", "Rex"),
-      List("Lin", "Zulu", "Rex"),
-      List("Uzi", "Rex", "null"),
-      List("Zulu", "nil", "Rex"),
+      List("Rex", "Lin", "Zulu"),   // Lin
+      List("nil", "Zulu", "Rex"),           // nil
+      List("Rex", "nil", "Zulu"),           // nil
+      List("Zulu", "Rex", "Lin"),   // Lin
+      List("null", "Uzi", "Rex"),                     // null, Uzi
+      List("Rex", "Zulu", "Lin"),   // Lin
+      List("Uzi", "null", "Rex"),                     // null, Uzi
+      List("Rex", "null", "Uzi"),                     // null, Uzi
+      List("null", "Rex", "Uzi"),                     // null, Uzi
+      List("Lin", "Rex", "Zulu"),   // Lin
+      List("nil", "Rex", "Zulu"),           // nil
+      List("Rex", "Uzi", "null"),                     // null, Uzi
+      List("Rex", "Zulu", "nil"),           // nil
+      List("Zulu", "Rex", "nil"),           // nil
+      List("Zulu", "Lin", "Rex"),   // Lin
+      List("Lin", "Zulu", "Rex"),   // Lin
+      List("Uzi", "Rex", "null"),                     // null, Uzi
+      List("Zulu", "nil", "Rex"),           // nil
       List("rulez", "Linux"),
       List("Linux", "rulez")
     )
@@ -144,5 +164,5 @@ class AnagramsSuite {
   }
 
 
-  @Rule def individualTestTimeout = new org.junit.rules.Timeout(1000 * 1000)
+  @Rule def individualTestTimeout = new org.junit.rules.Timeout(10 * 1000)
 }

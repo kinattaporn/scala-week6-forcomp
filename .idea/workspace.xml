@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad859d5d-b186-4bd2-a244-77da8229c90c" name="Default Changelist" comment="Add remainAnagramsRecursive">
+    <list default="true" id="ad859d5d-b186-4bd2-a244-77da8229c90c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/forcomp/Anagrams.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/forcomp/Anagrams.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/scala/forcomp/AnagramsSuite.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/forcomp/AnagramsSuite.scala" afterDir="false" />
@@ -208,40 +208,48 @@
       <option name="project" value="LOCAL" />
       <updated>1607926456346</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add combinationsWord">
+      <created>1608426089835</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608426089835</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add subtract" />
     <MESSAGE value="Add remainAnagrams" />
     <MESSAGE value="Add remainAnagramsRecursive" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add remainAnagramsRecursive" />
+    <MESSAGE value="Add combinationsWord" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add combinationsWord" />
   </component>
   <component name="WindowStateProjectService">
     <state x="522" y="232" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1607900355435">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
     <state x="522" y="232" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1440.873@0.23.1440.873" timestamp="1607900355435" />
-    <state x="377" y="60" key="CommitChangelistDialog2" timestamp="1608426026705">
+    <state x="377" y="60" key="CommitChangelistDialog2" timestamp="1608440733835">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state x="377" y="60" key="CommitChangelistDialog2/0.23.1440.873@0.23.1440.873" timestamp="1608426026705" />
-    <state width="1269" height="229" key="GridCell.Tab.0.bottom" timestamp="1608424751923">
+    <state x="377" y="60" key="CommitChangelistDialog2/0.23.1440.873@0.23.1440.873" timestamp="1608440733835" />
+    <state width="1133" height="229" key="GridCell.Tab.0.bottom" timestamp="1608440658913">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1269" height="229" key="GridCell.Tab.0.bottom/0.23.1440.873@0.23.1440.873" timestamp="1608424751923" />
-    <state width="1269" height="229" key="GridCell.Tab.0.center" timestamp="1608424751921">
+    <state width="1133" height="229" key="GridCell.Tab.0.bottom/0.23.1440.873@0.23.1440.873" timestamp="1608440658913" />
+    <state width="1133" height="229" key="GridCell.Tab.0.center" timestamp="1608440658912">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1269" height="229" key="GridCell.Tab.0.center/0.23.1440.873@0.23.1440.873" timestamp="1608424751921" />
-    <state width="1269" height="229" key="GridCell.Tab.0.left" timestamp="1608424751920">
+    <state width="1133" height="229" key="GridCell.Tab.0.center/0.23.1440.873@0.23.1440.873" timestamp="1608440658912" />
+    <state width="1133" height="229" key="GridCell.Tab.0.left" timestamp="1608440658911">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1269" height="229" key="GridCell.Tab.0.left/0.23.1440.873@0.23.1440.873" timestamp="1608424751920" />
-    <state width="1269" height="229" key="GridCell.Tab.0.right" timestamp="1608424751922">
+    <state width="1133" height="229" key="GridCell.Tab.0.left/0.23.1440.873@0.23.1440.873" timestamp="1608440658911" />
+    <state width="1133" height="229" key="GridCell.Tab.0.right" timestamp="1608440658913">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1269" height="229" key="GridCell.Tab.0.right/0.23.1440.873@0.23.1440.873" timestamp="1608424751922" />
+    <state width="1133" height="229" key="GridCell.Tab.0.right/0.23.1440.873@0.23.1440.873" timestamp="1608440658913" />
     <state width="1269" height="284" key="GridCell.Tab.1.bottom" timestamp="1608421118124">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
@@ -258,10 +266,10 @@
       <screen x="0" y="23" width="1440" height="873" />
     </state>
     <state width="1269" height="284" key="GridCell.Tab.1.right/0.23.1440.873@0.23.1440.873" timestamp="1608421118123" />
-    <state x="384" y="199" key="Vcs.Push.Dialog.v2" timestamp="1607926458128">
+    <state x="384" y="199" key="Vcs.Push.Dialog.v2" timestamp="1608426092792">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state x="384" y="199" key="Vcs.Push.Dialog.v2/0.23.1440.873@0.23.1440.873" timestamp="1607926458128" />
+    <state x="384" y="199" key="Vcs.Push.Dialog.v2/0.23.1440.873@0.23.1440.873" timestamp="1608426092792" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1607916073283">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
