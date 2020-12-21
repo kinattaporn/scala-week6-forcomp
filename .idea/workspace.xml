@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad859d5d-b186-4bd2-a244-77da8229c90c" name="Default Changelist" comment="">
+    <list default="true" id="ad859d5d-b186-4bd2-a244-77da8229c90c" name="Default Changelist" comment="Add occurrencesWord">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/forcomp/Anagrams.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/forcomp/Anagrams.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/scala/forcomp/AnagramsSuite.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/forcomp/AnagramsSuite.scala" afterDir="false" />
@@ -41,8 +41,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="JUnit.AnagramsSuite.sentence$u0020anagrams$colon$u0020Linux$u0020rulez$u0020$u002810pts$u0029">
-    <configuration name="AnagramsSuite.combinations$u0020test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AnagramsSuite.sentence$u0020anagrams$colon$u0020$u005B$u005D$u0020$u002810pts$u0029">
+    <configuration name="AnagramsSuite.occurrencesWordWhileCombination_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="progfun1-forcomp" />
       <extension name="coverage">
         <pattern>
@@ -52,13 +52,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="forcomp" />
       <option name="MAIN_CLASS_NAME" value="forcomp.AnagramsSuite" />
-      <option name="METHOD_NAME" value="combinations$u0020test" />
+      <option name="METHOD_NAME" value="occurrencesWordWhileCombination_test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AnagramsSuite.dictionaryByOccurrences$u002Eget$colon$u0020eat$u0020$u002810pts$u0029" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AnagramsSuite.occurrencesWord_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="progfun1-forcomp" />
       <extension name="coverage">
         <pattern>
@@ -68,7 +68,39 @@
       </extension>
       <option name="PACKAGE_NAME" value="forcomp" />
       <option name="MAIN_CLASS_NAME" value="forcomp.AnagramsSuite" />
-      <option name="METHOD_NAME" value="dictionaryByOccurrences$u002Eget$colon$u0020eat$u0020$u002810pts$u0029" />
+      <option name="METHOD_NAME" value="occurrencesWord_test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AnagramsSuite.occurrencesWord_test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="progfun1-forcomp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="forcomp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="forcomp" />
+      <option name="MAIN_CLASS_NAME" value="forcomp.AnagramsSuite" />
+      <option name="METHOD_NAME" value="occurrencesWord_test2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AnagramsSuite.sentence$u0020anagrams$colon$u0020$u005B$u005D$u0020$u002810pts$u0029" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="progfun1-forcomp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="forcomp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="forcomp" />
+      <option name="MAIN_CLASS_NAME" value="forcomp.AnagramsSuite" />
+      <option name="METHOD_NAME" value="sentence$u0020anagrams$colon$u0020$u005B$u005D$u0020$u002810pts$u0029" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -90,45 +122,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AnagramsSuite.wordAnagrams$u0020married$u0020$u00282pts$u0029" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="progfun1-forcomp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="forcomp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="forcomp" />
-      <option name="MAIN_CLASS_NAME" value="forcomp.AnagramsSuite" />
-      <option name="METHOD_NAME" value="wordAnagrams$u0020married$u0020$u00282pts$u0029" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AnagramsSuite.wordAnagrams$u0020player$u0020$u00282pts$u0029" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="progfun1-forcomp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="forcomp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="forcomp" />
-      <option name="MAIN_CLASS_NAME" value="forcomp.AnagramsSuite" />
-      <option name="METHOD_NAME" value="wordAnagrams$u0020player$u0020$u00282pts$u0029" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AnagramsSuite.sentence$u0020anagrams$colon$u0020$u005B$u005D$u0020$u002810pts$u0029" />
         <item itemvalue="JUnit.AnagramsSuite.sentence$u0020anagrams$colon$u0020Linux$u0020rulez$u0020$u002810pts$u0029" />
-        <item itemvalue="JUnit.AnagramsSuite.combinations$u0020test" />
-        <item itemvalue="JUnit.AnagramsSuite.wordAnagrams$u0020player$u0020$u00282pts$u0029" />
-        <item itemvalue="JUnit.AnagramsSuite.wordAnagrams$u0020married$u0020$u00282pts$u0029" />
-        <item itemvalue="JUnit.AnagramsSuite.dictionaryByOccurrences$u002Eget$colon$u0020eat$u0020$u002810pts$u0029" />
+        <item itemvalue="JUnit.AnagramsSuite.occurrencesWordWhileCombination_test" />
+        <item itemvalue="JUnit.AnagramsSuite.occurrencesWord_test2" />
+        <item itemvalue="JUnit.AnagramsSuite.occurrencesWord_test" />
       </list>
     </recent_temporary>
   </component>
@@ -215,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608426089835</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add occurrencesWord">
+      <created>1608440748897</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1608440748897</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -223,33 +230,34 @@
     <MESSAGE value="Add remainAnagrams" />
     <MESSAGE value="Add remainAnagramsRecursive" />
     <MESSAGE value="Add combinationsWord" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add combinationsWord" />
+    <MESSAGE value="Add occurrencesWord" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add occurrencesWord" />
   </component>
   <component name="WindowStateProjectService">
     <state x="522" y="232" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1607900355435">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
     <state x="522" y="232" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1440.873@0.23.1440.873" timestamp="1607900355435" />
-    <state x="377" y="60" key="CommitChangelistDialog2" timestamp="1608440733835">
+    <state x="103" y="60" width="1087" height="798" key="CommitChangelistDialog2" timestamp="1608527726164">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state x="377" y="60" key="CommitChangelistDialog2/0.23.1440.873@0.23.1440.873" timestamp="1608440733835" />
-    <state width="1133" height="229" key="GridCell.Tab.0.bottom" timestamp="1608440658913">
+    <state x="103" y="60" width="1087" height="798" key="CommitChangelistDialog2/0.23.1440.873@0.23.1440.873" timestamp="1608527726164" />
+    <state width="1133" height="229" key="GridCell.Tab.0.bottom" timestamp="1608527188810">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1133" height="229" key="GridCell.Tab.0.bottom/0.23.1440.873@0.23.1440.873" timestamp="1608440658913" />
-    <state width="1133" height="229" key="GridCell.Tab.0.center" timestamp="1608440658912">
+    <state width="1133" height="229" key="GridCell.Tab.0.bottom/0.23.1440.873@0.23.1440.873" timestamp="1608527188810" />
+    <state width="1133" height="229" key="GridCell.Tab.0.center" timestamp="1608527188808">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1133" height="229" key="GridCell.Tab.0.center/0.23.1440.873@0.23.1440.873" timestamp="1608440658912" />
-    <state width="1133" height="229" key="GridCell.Tab.0.left" timestamp="1608440658911">
+    <state width="1133" height="229" key="GridCell.Tab.0.center/0.23.1440.873@0.23.1440.873" timestamp="1608527188808" />
+    <state width="1133" height="229" key="GridCell.Tab.0.left" timestamp="1608527188807">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1133" height="229" key="GridCell.Tab.0.left/0.23.1440.873@0.23.1440.873" timestamp="1608440658911" />
-    <state width="1133" height="229" key="GridCell.Tab.0.right" timestamp="1608440658913">
+    <state width="1133" height="229" key="GridCell.Tab.0.left/0.23.1440.873@0.23.1440.873" timestamp="1608527188807" />
+    <state width="1133" height="229" key="GridCell.Tab.0.right" timestamp="1608527188809">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1133" height="229" key="GridCell.Tab.0.right/0.23.1440.873@0.23.1440.873" timestamp="1608440658913" />
+    <state width="1133" height="229" key="GridCell.Tab.0.right/0.23.1440.873@0.23.1440.873" timestamp="1608527188809" />
     <state width="1269" height="284" key="GridCell.Tab.1.bottom" timestamp="1608421118124">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
@@ -266,10 +274,10 @@
       <screen x="0" y="23" width="1440" height="873" />
     </state>
     <state width="1269" height="284" key="GridCell.Tab.1.right/0.23.1440.873@0.23.1440.873" timestamp="1608421118123" />
-    <state x="384" y="199" key="Vcs.Push.Dialog.v2" timestamp="1608426092792">
+    <state x="384" y="199" key="Vcs.Push.Dialog.v2" timestamp="1608440750656">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state x="384" y="199" key="Vcs.Push.Dialog.v2/0.23.1440.873@0.23.1440.873" timestamp="1608426092792" />
+    <state x="384" y="199" key="Vcs.Push.Dialog.v2/0.23.1440.873@0.23.1440.873" timestamp="1608440750656" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1607916073283">
       <screen x="0" y="23" width="1440" height="873" />
     </state>

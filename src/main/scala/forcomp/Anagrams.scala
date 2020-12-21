@@ -184,20 +184,45 @@ object Anagrams extends AnagramsInterface {
    */
   def sentenceAnagrams(sentence: Sentence): List[Sentence] = {
     val o = sentenceOccurrences(sentence)
-    val possibleWord = findPossibleWord(o)
-    val possibleWordTest = List(
-      List("Zulu", ""),
-        List("Lin", "nil", ""),
-        List("Rex", "")
-    )
-    if (sentence.length == 0) List()
-    else combinationsWord(possibleWordTest)
+    if (sentence.length == 0) List(List())
+    else {
+      val occWordWhile = occurrencesWordWhile(List(), o)
+      println("----- occWordWhile", occWordWhile)
+      occWordWhile.foreach(println)
+      val occWordWhileCombination = occurrencesWordWhileCombination(occWordWhile)
+      println("----- occWordWhileCombination", occWordWhileCombination)
+      occWordWhileCombination.foreach(println)
+      occWordWhileCombination
+    }
   }
-//  def occurrencesWordRecursive(o: Occurrences, ): (Occurrences, List[List[Word]]) = {
-//
-//  }
+  def occurrencesWordRecursive(wordList: List[List[Word]], o: Occurrences, l: Int): (List[(List[List[Word]], Occurrences)], Int) = {
+    val occWord = occurrencesWord(List(), o)
+    val occWordR1 = occWord
+                    .map(x => occurrencesWord(x._1, x._2)).flatMap(x => x)
+    if (occWord.length == 0) (occWord, occWord.length)
+    else if (l == 0) (occWordR1, occWordR1.length)
+    else (occurrencesWordRecursive(List(), o, 2)._1
+            .map(x => occurrencesWord(x._1, x._2)).flatMap(x => x),
+          occurrencesWordRecursive(List(), o, 2)._1
+            .map(x => occurrencesWord(x._1, x._2)).flatMap(x => x).length)
+  }
+  def occurrencesWordWhileCombination(wordList: List[(List[List[Word]], Occurrences)]): List[List[Word]] = {
+    wordList.map(x => combinationsWord(x._1)).flatMap(x => x)
+  }
+  def occurrencesWordWhile(wordList: List[List[Word]], o: Occurrences): List[(List[List[Word]], Occurrences)] = {
+    var occWord = occurrencesWord(List(), o)
+    occWord.foreach(println)
+    var wordList = occWord.filter(x => x._2 == List())
+    while(occWord.length != 0) {
+      occWord = occWord
+        .map(x => occurrencesWord(x._1, x._2)).flatMap(x => x)
+      occWord.foreach(println)
+      wordList = wordList ::: occWord.filter(x => x._2 == List())
+    }
+    wordList
+  }
   def occurrencesWord(wordList: List[List[Word]], o: Occurrences): List[(List[List[Word]], Occurrences)] = {
-//    println("occurrences", o)
+//    println("----- occurrences", o)
     combinations(o)
       .map(x => {
         val possibleWord = dictionaryByOccurrences.get(x)
@@ -205,22 +230,11 @@ object Anagrams extends AnagramsInterface {
           if (possibleWord == None) List()
           else subtract(o, x)
         }
-        println(x, "|", possibleWord, "|", remain)
+//        println(x, "|", possibleWord, "|", remain)
         (possibleWord, remain)
       })
       .filter(x => x._1 != None)
       .map(x => (wordList ::: List(x._1.get), x._2))
-  }
-  def findPossibleWord(o: Occurrences): List[List[Word]] = {
-//    println("occurrences", o)
-    combinations(o)
-      .map(x => {
-        val possibleWord = dictionaryByOccurrences.get(x)
-//        println(x, "|", possibleWord)
-        possibleWord
-      })
-      .filter(x => x != None)
-      .map(x => x.get ::: List(""))
   }
   def combinationsWord(possibleWord: List[List[Word]]): List[List[Word]] = {
     if (possibleWord.length == 0) List(List())

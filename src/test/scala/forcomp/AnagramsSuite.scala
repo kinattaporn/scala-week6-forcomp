@@ -82,34 +82,7 @@ class AnagramsSuite {
   }
 
 
-  @Test def `sentence anagrams: [] (10pts)`: Unit = {
-    val sentence = List()
-    assertEquals(List(Nil), sentenceAnagrams(sentence))
-  }
-
-  @Test def `sentence anagrams: Linux rulez (10pts)`: Unit = {
-    val sentence = List("Linux", "rulez")
-    val o = sentenceOccurrences(sentence) // List((e,1), (i,1), (l,2), (n,1), (r,1), (u,2), (x,1), (z,1))
-    val oZulu = List(('e',1), ('i',1), ('l',1), ('n',1), ('r',1), ('x',1))
-    val oLin = List(('e',1), ('r',1), ('x',1))
-    val occWordZulu = occurrencesWord(List(), oZulu)
-    val occWordLin = occurrencesWord(List(List("Zulu")), oLin)
-    println("----- occWordZulu")
-    occWordZulu.foreach(println)
-    println("----- occWordLin")
-    occWordLin.foreach(println)
-
-    val possibleWord = findPossibleWord(o)
-    val possibleWordTest = List(
-      List("Zulu", ""),
-      List("Lin", "nil", ""),
-      List("Rex", "")
-    )
-//    println("----- possibleWord")
-//    possibleWord.foreach(println)
-//    println("----- possibleWordTest")
-//    possibleWordTest.foreach(println)
-
+  @Test def `combinationsWord_test`: Unit = {
     val list1 = List("Lin", "nil")
     val list2 = List("run", "urn")
     val list3 = List("lien", "line", "Neil", "Nile")
@@ -119,25 +92,88 @@ class AnagramsSuite {
     val cw234 = combinationsWord3(list2, combinationsWord2(list3, list4))
     val cw1234 = combinationsWord3(list1, combinationsWord3(list2, combinationsWord2(list3, list4)))
     val cwr = combinationsWord(list1234)
-//    val cwrPwt = combinationsWord(possibleWordTest)
-//    val cwrPw = combinationsWord(possibleWord)
-//    println("----- cw34", cw34)
-//    cw34.foreach(println)
-//    println("----- cw234", cw234)
-//    cw234.foreach(println)
-//    println("----- cw1234", cw1234)
-//    cw1234.foreach(println)
-//    println("----- cwr", cwr)
-//    cwr.foreach(println)
-//    println("----- cwrPwt", cwrPwt)
-//    cwrPwt.foreach(println)
-//    println("----- cwrPw", cwrPw)
-//    cwrPw.foreach(println)
-//
-//    val sa = sentenceAnagrams(sentence)
-//    println("----- sa", sa)
-//    sa.foreach(println)
+    println("----- cw34", cw34)
+    cw34.foreach(println)
+    println("----- cw234", cw234)
+    cw234.foreach(println)
+    println("----- cw1234", cw1234)
+    cw1234.foreach(println)
+    println("----- cwr", cwr)
+    cwr.foreach(println)
+  }
 
+  @Test def `occurrencesWord_test`: Unit = {
+    val sentence = List("Linux", "rulez")
+    val o = sentenceOccurrences(sentence) // List((e,1), (i,1), (l,2), (n,1), (r,1), (u,2), (x,1), (z,1))
+    val oZulu = List(('e',1), ('i',1), ('l',1), ('n',1), ('r',1), ('x',1))
+    val oZuluLinnil = List(('e',1), ('r',1), ('x',1))
+    val occWord = occurrencesWord(List(), o)
+    val occWordZulu = occurrencesWord(List(List("Zulu")), oZulu)
+    val occWordZuluLinnil = occurrencesWord(List(List("Zulu"), List("Lin", "nil")), oZuluLinnil)
+    println("----- occWord")
+    occWord.foreach(println)
+    println("----- occWordZulu")
+    occWordZulu.foreach(println)
+    println("----- occWordZuluLinnil")
+    occWordZuluLinnil.foreach(println)
+  }
+
+  @Test def `occurrencesWord_test2`: Unit = {
+    val sentence = List("Linux", "rulez")
+    val o = sentenceOccurrences(sentence) // List((e,1), (i,1), (l,2), (n,1), (r,1), (u,2), (x,1), (z,1))
+    val occWordR1 = occurrencesWord(List(), o)
+                      .map(x => occurrencesWord(x._1, x._2)).flatMap(x => x)
+    val occWordR1ans = occWordR1.filter(x => x._2 == List())
+    val occWordR2 = occurrencesWord(List(), o)
+                      .map(x => occurrencesWord(x._1, x._2)).flatMap(x => x)
+                      .map(x => occurrencesWord(x._1, x._2)).flatMap(x => x)
+    val occWordR2ans = occWordR2.filter(x => x._2 == List())
+    val occWordR3 = occurrencesWord(List(), o)
+                      .map(x => occurrencesWord(x._1, x._2)).flatMap(x => x)
+                      .map(x => occurrencesWord(x._1, x._2)).flatMap(x => x)
+                      .map(x => occurrencesWord(x._1, x._2)).flatMap(x => x)
+    val occWordR3ans = occWordR3.filter(x => x._2 == List())
+    println("----- occWordR1", occWordR1.length)
+    occWordR1.foreach(println)
+    println("----- occWordR1ans", occWordR1ans.length)
+    occWordR1ans.foreach(println)
+    println("----- occWordR2", occWordR2.length)
+    occWordR2.foreach(println)
+    println("----- occWordR2ans", occWordR2ans.length)
+    occWordR2ans.foreach(println)
+    println("----- occWordR3", occWordR3.length)
+    occWordR3.foreach(println)
+    println("----- occWordR3ans", occWordR3ans.length)
+    occWordR3ans.foreach(println)
+  }
+
+  @Test def `occurrencesWordWhileCombination_test`: Unit = {
+    val sentence = List("Linux", "rulez")
+    val o = sentenceOccurrences(sentence) // List((e,1), (i,1), (l,2), (n,1), (r,1), (u,2), (x,1), (z,1))
+    val occWordWhile = occurrencesWordWhile(List(), o)
+    println("----- occWordWhile", occWordWhile)
+    occWordWhile.foreach(println)
+    val occWordWhileCombination = occurrencesWordWhileCombination(occWordWhile)
+    println("----- occWordWhileCombination", occWordWhileCombination)
+    occWordWhileCombination.foreach(println)
+  }
+
+  @Test def `occurrencesWordRecursive_test`: Unit = {
+    val sentence = List("Linux", "rulez")
+    val o = sentenceOccurrences(sentence) // List((e,1), (i,1), (l,2), (n,1), (r,1), (u,2), (x,1), (z,1))
+    val occWordRr = occurrencesWordRecursive(List(), o, 0)
+    println("----- occWordRr", occWordRr._2)
+    occWordRr._1.foreach(println)
+  }
+
+  @Test def `sentence anagrams: [] (10pts)`: Unit = {
+    val sentence = List()
+    assertEquals(List(Nil), sentenceAnagrams(sentence))
+  }
+
+  @Test def `sentence anagrams: Linux rulez (10pts)`: Unit = {
+    val sentence = List("Linux", "rulez")
+    val sentence2 = List("Yes", "man")
     val anas = List(
       List("Rex", "Lin", "Zulu"),   // Lin
       List("nil", "Zulu", "Rex"),           // nil
@@ -160,7 +196,24 @@ class AnagramsSuite {
       List("rulez", "Linux"),
       List("Linux", "rulez")
     )
-//    assertEquals(anas.toSet, sentenceAnagrams(sentence).toSet)
+    val anas2 = List(
+      List("en", "as", "my"),
+      List("en", "my", "as"),
+      List("man", "yes"),
+      List("men", "say"),
+      List("as", "en", "my"),
+      List("as", "my", "en"),
+      List("sane", "my"),
+      List("Sean", "my"),
+      List("my", "en", "as"),
+      List("my", "as", "en"),
+      List("my", "sane"),
+      List("my", "Sean"),
+      List("say", "men"),
+      List("yes", "man")
+    )
+    assertEquals(anas.toSet, sentenceAnagrams(sentence).toSet)
+    assertEquals(anas2.toSet, sentenceAnagrams(sentence2).toSet)
   }
 
 
