@@ -198,28 +198,29 @@ object Anagrams extends AnagramsInterface {
   def occurrencesWordCombination(wordList: List[(List[List[Word]], Occurrences)]): List[List[Word]] = {
     wordList.map(x => combinationsWord(x._1)).flatMap(x => x)
   }
-//  def occurrencesWordRecursive(wordList: List[List[Word]], o: Occurrences, l: Int): (List[(List[List[Word]], Occurrences)], Int) = {
-//    val occWord = occurrencesWord(List(), o)
-//    occWord.foreach(println)
-//    def occurrencesWordR(wordList: List[List[Word]], o: Occurrences): List[(List[List[Word]], Occurrences)] = {
-//      val occWord = occurrencesWord(wordList, o)
-//      occWord.foreach(println)
-//      if (occWord.length == 0) occWord
-//      else occWord
-//        .map(x => occurrencesWord(x._1, x._2)).flatMap(x => x)
-//    }
-//  }
   def occurrencesWordWhile(wordList: List[List[Word]], o: Occurrences): List[(List[List[Word]], Occurrences)] = {
     var occWord = occurrencesWord(List(), o)
-    occWord.foreach(println)
     var wordList = occWord.filter(x => x._2 == List())
+    println("----- occWord")
+    occWord.foreach(println)
+    println("----- wordList")
+    wordList.foreach(println)
     while(occWord.length != 0) {
       occWord = occWord
         .map(x => occurrencesWord(x._1, x._2)).flatMap(x => x)
-      occWord.foreach(println)
       wordList = wordList ::: occWord.filter(x => x._2 == List())
+      println("----- occWord")
+      occWord.foreach(println)
+      println("----- wordList")
+      wordList.foreach(println)
     }
     wordList
+  }
+  def occurrencesWordMapFlatMap(occWord: List[(List[List[Word]], Occurrences)], wordList: List[(List[List[Word]], Occurrences)]): (List[(List[List[Word]], Occurrences)], List[(List[List[Word]], Occurrences)]) = {
+    val occWord2 = occWord
+      .map(x => occurrencesWord(x._1, x._2)).flatMap(x => x)
+    val wordList2 = wordList ::: occWord.filter(x => x._2 == List())
+    (occWord2, wordList2)
   }
   def occurrencesWord(wordList: List[List[Word]], o: Occurrences): List[(List[List[Word]], Occurrences)] = {
 //    println("----- occurrences", o)

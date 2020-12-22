@@ -145,15 +145,39 @@ class AnagramsSuite {
     occWordR3.foreach(println)
     println("----- occWordR3ans", occWordR3ans.length)
     occWordR3ans.foreach(println)
+    assertEquals(178, occWordR1.length)
+    assertEquals(2, occWordR1ans.length)
+    assertEquals(162, occWordR2.length)
+    assertEquals(12, occWordR2ans.length)
+    assertEquals(0, occWordR3.length)
+    assertEquals(0, occWordR3ans.length)
   }
 
-//  @Test def `occurrencesWordRecursive_test`: Unit = {
-//    val sentence = List("Linux", "rulez")
-//    val o = sentenceOccurrences(sentence) // List((e,1), (i,1), (l,2), (n,1), (r,1), (u,2), (x,1), (z,1))
-//    val occWordRr = occurrencesWordRecursive(List(), o, 0)
-//    println("----- occWordRr", occWordRr._2)
-//    occWordRr._1.foreach(println)
-//  }
+  @Test def `occurrencesWordMapFlatMap_test`: Unit = {
+    val sentence = List("Linux", "rulez")
+    val o = sentenceOccurrences(sentence) // List((e,1), (i,1), (l,2), (n,1), (r,1), (u,2), (x,1), (z,1))
+    val (occWordR1, occWordR1ans) = occurrencesWordMapFlatMap(occurrencesWord(List(), o), List())
+    val (occWordR2, occWordR2ans) = occurrencesWordMapFlatMap(occWordR1, occWordR1ans)
+    val (occWordR3, occWordR3ans) = occurrencesWordMapFlatMap(occWordR2, occWordR2ans)
+    println("----- occWordR1", occWordR1.length)
+    occWordR1.foreach(println)
+    println("----- occWordR1ans", occWordR1ans.length)
+    occWordR1ans.foreach(println)
+    println("----- occWordR2", occWordR2.length)
+    occWordR2.foreach(println)
+    println("----- occWordR2ans", occWordR2ans.length)
+    occWordR2ans.foreach(println)
+    println("----- occWordR3", occWordR3.length)
+    occWordR3.foreach(println)
+    println("----- occWordR3ans", occWordR3ans.length)
+    occWordR3ans.foreach(println)
+    assertEquals(178, occWordR1.length)
+    assertEquals(0, occWordR1ans.length)
+    assertEquals(162, occWordR2.length)
+    assertEquals(2, occWordR2ans.length)
+    assertEquals(0, occWordR3.length)
+    assertEquals(14, occWordR3ans.length)
+  }
 
   @Test def `occurrencesWordCombination_test`: Unit = {
     val sentence = List("Linux", "rulez")
