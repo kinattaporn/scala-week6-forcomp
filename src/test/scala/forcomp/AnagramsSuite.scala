@@ -147,23 +147,23 @@ class AnagramsSuite {
     occWordR3ans.foreach(println)
   }
 
-  @Test def `occurrencesWordWhileCombination_test`: Unit = {
+//  @Test def `occurrencesWordRecursive_test`: Unit = {
+//    val sentence = List("Linux", "rulez")
+//    val o = sentenceOccurrences(sentence) // List((e,1), (i,1), (l,2), (n,1), (r,1), (u,2), (x,1), (z,1))
+//    val occWordRr = occurrencesWordRecursive(List(), o, 0)
+//    println("----- occWordRr", occWordRr._2)
+//    occWordRr._1.foreach(println)
+//  }
+
+  @Test def `occurrencesWordCombination_test`: Unit = {
     val sentence = List("Linux", "rulez")
     val o = sentenceOccurrences(sentence) // List((e,1), (i,1), (l,2), (n,1), (r,1), (u,2), (x,1), (z,1))
     val occWordWhile = occurrencesWordWhile(List(), o)
     println("----- occWordWhile", occWordWhile)
     occWordWhile.foreach(println)
-    val occWordWhileCombination = occurrencesWordWhileCombination(occWordWhile)
+    val occWordWhileCombination = occurrencesWordCombination(occWordWhile)
     println("----- occWordWhileCombination", occWordWhileCombination)
     occWordWhileCombination.foreach(println)
-  }
-
-  @Test def `occurrencesWordRecursive_test`: Unit = {
-    val sentence = List("Linux", "rulez")
-    val o = sentenceOccurrences(sentence) // List((e,1), (i,1), (l,2), (n,1), (r,1), (u,2), (x,1), (z,1))
-    val occWordRr = occurrencesWordRecursive(List(), o, 0)
-    println("----- occWordRr", occWordRr._2)
-    occWordRr._1.foreach(println)
   }
 
   @Test def `sentence anagrams: [] (10pts)`: Unit = {

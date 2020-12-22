@@ -189,26 +189,26 @@ object Anagrams extends AnagramsInterface {
       val occWordWhile = occurrencesWordWhile(List(), o)
       println("----- occWordWhile", occWordWhile)
       occWordWhile.foreach(println)
-      val occWordWhileCombination = occurrencesWordWhileCombination(occWordWhile)
+      val occWordWhileCombination = occurrencesWordCombination(occWordWhile)
       println("----- occWordWhileCombination", occWordWhileCombination)
       occWordWhileCombination.foreach(println)
       occWordWhileCombination
     }
   }
-  def occurrencesWordRecursive(wordList: List[List[Word]], o: Occurrences, l: Int): (List[(List[List[Word]], Occurrences)], Int) = {
-    val occWord = occurrencesWord(List(), o)
-    val occWordR1 = occWord
-                    .map(x => occurrencesWord(x._1, x._2)).flatMap(x => x)
-    if (occWord.length == 0) (occWord, occWord.length)
-    else if (l == 0) (occWordR1, occWordR1.length)
-    else (occurrencesWordRecursive(List(), o, 2)._1
-            .map(x => occurrencesWord(x._1, x._2)).flatMap(x => x),
-          occurrencesWordRecursive(List(), o, 2)._1
-            .map(x => occurrencesWord(x._1, x._2)).flatMap(x => x).length)
-  }
-  def occurrencesWordWhileCombination(wordList: List[(List[List[Word]], Occurrences)]): List[List[Word]] = {
+  def occurrencesWordCombination(wordList: List[(List[List[Word]], Occurrences)]): List[List[Word]] = {
     wordList.map(x => combinationsWord(x._1)).flatMap(x => x)
   }
+//  def occurrencesWordRecursive(wordList: List[List[Word]], o: Occurrences, l: Int): (List[(List[List[Word]], Occurrences)], Int) = {
+//    val occWord = occurrencesWord(List(), o)
+//    occWord.foreach(println)
+//    def occurrencesWordR(wordList: List[List[Word]], o: Occurrences): List[(List[List[Word]], Occurrences)] = {
+//      val occWord = occurrencesWord(wordList, o)
+//      occWord.foreach(println)
+//      if (occWord.length == 0) occWord
+//      else occWord
+//        .map(x => occurrencesWord(x._1, x._2)).flatMap(x => x)
+//    }
+//  }
   def occurrencesWordWhile(wordList: List[List[Word]], o: Occurrences): List[(List[List[Word]], Occurrences)] = {
     var occWord = occurrencesWord(List(), o)
     occWord.foreach(println)
