@@ -206,9 +206,8 @@ object Anagrams extends AnagramsInterface {
     println("----- wordList")
     wordList.foreach(println)
     while(occWord.length != 0) {
-      occWord = occWord
-        .map(x => occurrencesWord(x._1, x._2)).flatMap(x => x)
-      wordList = wordList ::: occWord.filter(x => x._2 == List())
+      occWord = occurrencesWordMapFlatMap(occWord, wordList)._1
+      wordList = occurrencesWordMapFlatMap(occWord, wordList)._2
       println("----- occWord")
       occWord.foreach(println)
       println("----- wordList")
@@ -217,8 +216,7 @@ object Anagrams extends AnagramsInterface {
     wordList
   }
   def occurrencesWordMapFlatMap(occWord: List[(List[List[Word]], Occurrences)], wordList: List[(List[List[Word]], Occurrences)]): (List[(List[List[Word]], Occurrences)], List[(List[List[Word]], Occurrences)]) = {
-    val occWord2 = occWord
-      .map(x => occurrencesWord(x._1, x._2)).flatMap(x => x)
+    val occWord2 = occWord.map(x => occurrencesWord(x._1, x._2)).flatMap(x => x)
     val wordList2 = wordList ::: occWord.filter(x => x._2 == List())
     (occWord2, wordList2)
   }

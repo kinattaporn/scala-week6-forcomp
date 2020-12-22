@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad859d5d-b186-4bd2-a244-77da8229c90c" name="Default Changelist" comment="Add occurrencesWordCombination">
+    <list default="true" id="ad859d5d-b186-4bd2-a244-77da8229c90c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/forcomp/Anagrams.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/forcomp/Anagrams.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/forcomp/AnagramsSuite.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/forcomp/AnagramsSuite.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/forcomp/Anagrams$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/forcomp/Anagrams$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/forcomp/Anagrams.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/forcomp/Anagrams.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/forcomp/Dictionary$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/forcomp/Dictionary$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/test-classes/forcomp/AnagramsSuite.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/test-classes/forcomp/AnagramsSuite.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +37,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="JUnit.AnagramsSuite.occurrencesWordMapFlatMap_test">
+  <component name="RunManager" selected="JUnit.AnagramsSuite.sentence$u0020anagrams$colon$u0020Linux$u0020rulez$u0020$u002810pts$u0029">
     <configuration name="AnagramsSuite.occurrencesWordCombination_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="progfun1-forcomp" />
       <extension name="coverage">
@@ -124,11 +120,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AnagramsSuite.occurrencesWordMapFlatMap_test" />
-        <item itemvalue="JUnit.AnagramsSuite.occurrencesWord_test2" />
         <item itemvalue="JUnit.AnagramsSuite.sentence$u0020anagrams$colon$u0020Linux$u0020rulez$u0020$u002810pts$u0029" />
         <item itemvalue="JUnit.AnagramsSuite.sentence$u0020anagrams$colon$u0020$u005B$u005D$u0020$u002810pts$u0029" />
         <item itemvalue="JUnit.AnagramsSuite.occurrencesWordCombination_test" />
+        <item itemvalue="JUnit.AnagramsSuite.occurrencesWordMapFlatMap_test" />
+        <item itemvalue="JUnit.AnagramsSuite.occurrencesWord_test2" />
       </list>
     </recent_temporary>
   </component>
@@ -236,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608598032609</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add occurrencesWordMapFlatMap">
+      <created>1608616842182</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1608616842182</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -247,33 +250,34 @@
     <MESSAGE value="Add occurrencesWord" />
     <MESSAGE value="Add occurrencesWordWhileCombination" />
     <MESSAGE value="Add occurrencesWordCombination" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add occurrencesWordCombination" />
+    <MESSAGE value="Add occurrencesWordMapFlatMap" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add occurrencesWordMapFlatMap" />
   </component>
   <component name="WindowStateProjectService">
     <state x="522" y="232" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1607900355435">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
     <state x="522" y="232" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1440.873@0.23.1440.873" timestamp="1607900355435" />
-    <state x="103" y="60" width="1087" height="798" key="CommitChangelistDialog2" timestamp="1608603529084">
+    <state x="0" y="60" width="1440" height="798" key="CommitChangelistDialog2" timestamp="1608616841694">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state x="103" y="60" width="1087" height="798" key="CommitChangelistDialog2/0.23.1440.873@0.23.1440.873" timestamp="1608603529084" />
-    <state width="1133" height="229" key="GridCell.Tab.0.bottom" timestamp="1608616743556">
+    <state x="0" y="60" width="1440" height="798" key="CommitChangelistDialog2/0.23.1440.873@0.23.1440.873" timestamp="1608616841694" />
+    <state width="1320" height="229" key="GridCell.Tab.0.bottom" timestamp="1608617170457">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1133" height="229" key="GridCell.Tab.0.bottom/0.23.1440.873@0.23.1440.873" timestamp="1608616743556" />
-    <state width="1133" height="229" key="GridCell.Tab.0.center" timestamp="1608616743555">
+    <state width="1320" height="229" key="GridCell.Tab.0.bottom/0.23.1440.873@0.23.1440.873" timestamp="1608617170457" />
+    <state width="1320" height="229" key="GridCell.Tab.0.center" timestamp="1608617170455">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1133" height="229" key="GridCell.Tab.0.center/0.23.1440.873@0.23.1440.873" timestamp="1608616743555" />
-    <state width="1133" height="229" key="GridCell.Tab.0.left" timestamp="1608616743554">
+    <state width="1320" height="229" key="GridCell.Tab.0.center/0.23.1440.873@0.23.1440.873" timestamp="1608617170455" />
+    <state width="1320" height="229" key="GridCell.Tab.0.left" timestamp="1608617170455">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1133" height="229" key="GridCell.Tab.0.left/0.23.1440.873@0.23.1440.873" timestamp="1608616743554" />
-    <state width="1133" height="229" key="GridCell.Tab.0.right" timestamp="1608616743555">
+    <state width="1320" height="229" key="GridCell.Tab.0.left/0.23.1440.873@0.23.1440.873" timestamp="1608617170455" />
+    <state width="1320" height="229" key="GridCell.Tab.0.right" timestamp="1608617170456">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state width="1133" height="229" key="GridCell.Tab.0.right/0.23.1440.873@0.23.1440.873" timestamp="1608616743555" />
+    <state width="1320" height="229" key="GridCell.Tab.0.right/0.23.1440.873@0.23.1440.873" timestamp="1608617170456" />
     <state width="1269" height="284" key="GridCell.Tab.1.bottom" timestamp="1608421118124">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
@@ -290,10 +294,10 @@
       <screen x="0" y="23" width="1440" height="873" />
     </state>
     <state width="1269" height="284" key="GridCell.Tab.1.right/0.23.1440.873@0.23.1440.873" timestamp="1608421118123" />
-    <state x="384" y="199" key="Vcs.Push.Dialog.v2" timestamp="1608598034459">
+    <state x="384" y="199" key="Vcs.Push.Dialog.v2" timestamp="1608616843991">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
-    <state x="384" y="199" key="Vcs.Push.Dialog.v2/0.23.1440.873@0.23.1440.873" timestamp="1608598034459" />
+    <state x="384" y="199" key="Vcs.Push.Dialog.v2/0.23.1440.873@0.23.1440.873" timestamp="1608616843991" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1607916073283">
       <screen x="0" y="23" width="1440" height="873" />
     </state>
