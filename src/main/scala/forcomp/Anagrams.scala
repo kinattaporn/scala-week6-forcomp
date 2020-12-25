@@ -198,6 +198,7 @@ object Anagrams extends AnagramsInterface {
   def occurrencesWordCombination(wordList: List[(List[List[Word]], Occurrences)]): List[List[Word]] = {
     wordList.map(x => combinationsWord(x._1)).flatMap(x => x)
   }
+  @SuppressWarnings(Array("all"))
   def occurrencesWordWhile(wordList: List[List[Word]], o: Occurrences): List[(List[List[Word]], Occurrences)] = {
     var occWord = occurrencesWord(List(), o)
     var wordList = occWord.filter(x => x._2 == List())
